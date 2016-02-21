@@ -3,6 +3,7 @@ package ContactManager;
 import static org.junit.Assert.*;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 
@@ -137,14 +138,14 @@ public class ContactManagerTest {
 	
 	// unfinished
 	@Test (expected = IllegalStateException.class)
-	public void testPastMeetingAddMeetingNotesMeetingDoesNotExist(){
+	public void testPastMeetingAddMeetingNotes???(){
 		
 		
 	}
 	
 	// unfinished
 		@Test (expected = NullPointerException.class)
-		public void testPastMeetingAddMeetingNotesMeetingDoesNotExist(){
+		public void testPastMeetingAddMeetingNotes??(){
 			
 			
 		}
@@ -152,7 +153,7 @@ public class ContactManagerTest {
 		
 	// unfinished
 		@Test (expected = NullPointerException.class)
-		public void testPastMeetingAddMeetingNotesMeetingDoesNotExist(){
+		public void testPastMeetingAddMeetingNotes????(){
 					
 		}
 		
@@ -225,7 +226,7 @@ public class ContactManagerTest {
 	
 	
 	@Test
-	public void testFlushZeroContents(){
+	public void testFlushZeroContents() throws FileNotFoundException{
 		ContactManagerImpl cm2 = new ContactManagerImpl();
 		cm2.flush();
 		File newFile = new File("projectFile.txt");
@@ -235,7 +236,7 @@ public class ContactManagerTest {
 	
 	
 	@Test
-	public void testFlushWithContents(){
+	public void testFlushWithContents() throws FileNotFoundException{
 		cm.flush();
 		File newFile = new File("projectFile.txt");
 		assertNotNull(newFile);
