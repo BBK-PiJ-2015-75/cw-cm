@@ -71,55 +71,29 @@ public class ContactManagerImpl implements ContactManager{
 
 
 
-	/**
-	 * @throws IllegalStateException
-	 *             if there is a meeting with that ID happening in the future
-	 */
 
 	@Override
-	public PastMeeting getPastMeeting(int pastMeetingID) {
-		PastMeetingImpl meeting;
-		try {
-			if (getMeeting(pastMeetingID) instanceof PastMeeting) {
-				meeting = (PastMeetingImpl) getMeeting(pastMeetingID);
-			} else {
-				System.out.println("Meeting id is not for a past meeting");
-				throw new IllegalArgumentException(); // should this be illegal
-														// state exception?
-			}
-		} catch (NullPointerException e) {
-			throw new IllegalArgumentException();
-		}
-		return meeting;
+	public PastMeeting getPastMeeting(int id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-/***
-	 * @throws IllegalArgumentException
-	 *             if there is a meeting with that ID happening in the past
-	 */
+
+
+
 	@Override
 	public FutureMeeting getFutureMeeting(int id) {
-		FutureMeeting meeting;
-		try {
-			if (getMeeting(id) instanceof FutureMeeting) {
-				meeting = (FutureMeetingImpl) getMeeting(id);
-			} else {
-				System.out.println("Meeting id is not for a future meeting");
-				throw new IllegalArgumentException();
-			}
-		} catch (NullPointerException e) {
-			throw new IllegalArgumentException();
-		}
-		return meeting;
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+
+
 
 	@Override
 	public Meeting getMeeting(int id) {
-		if ((meetingsList.isEmpty()) || (meetingsList.get(id - 1) == null)) {
-			throw new NullPointerException();
-		}
-
-		return meetingsList.get(id - 1);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
