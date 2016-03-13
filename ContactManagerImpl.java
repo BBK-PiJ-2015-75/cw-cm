@@ -341,11 +341,6 @@ public class ContactManagerImpl implements ContactManager {
 	}
 
 	/**
-	 * Returns a list with the contacts whose name contains that string.
-	 *
-	 * If the string is the empty string, this methods returns the set that
-	 * contains all current contacts.
-	 *
 	 * @param name
 	 *            the string to search for
 	 * @return a list with the contacts whose name contains that string.
@@ -371,13 +366,6 @@ public class ContactManagerImpl implements ContactManager {
 	}
 
 	/**
-	 * 4 Returns a list containing the contacts that correspond to the IDs. Note
-	 * that this method can be used to retrieve just one contact by passing only
-	 * one ID.
-	 *
-	 * @param ids
-	 *            an arbitrary number of contact IDs
-	 * @return a list containing the contacts that correspond to the IDs.
 	 * @throws IllegalArgumentException
 	 *             if no IDs are provided or if any of the provided IDs does not
 	 *             correspond to a real contact
@@ -410,12 +398,8 @@ public class ContactManagerImpl implements ContactManager {
 		return iDMatches;
 	}
 
+	
 	/**
-	 * Save all data to disk.
-	 *
-	 * This method must be executed when the program is closed and when/if the
-	 * user requests it.
-	 * 
 	 * @throws FileNotFoundException
 	 *             // create a printer writer, in order to create a file, output
 	 *             all the // contacts // and meetings to the file.
