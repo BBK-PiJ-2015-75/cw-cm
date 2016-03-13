@@ -1,5 +1,6 @@
 package ContactManager;
 
+import java.io.FileNotFoundException;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Set;
@@ -153,6 +154,7 @@ Set<Contact> getContacts(int... ids);
 *
 * This method must be executed when the program is
 * closed and when/if the user requests it.
+ * @throws FileNotFoundException 
 */
-void flush();
+void flush() throws FileNotFoundException;
 }
